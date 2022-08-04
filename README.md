@@ -1,10 +1,10 @@
-## 1. Database Migration from MariaDB to MySQL
+## Database Migration from MariaDB to MySQL
 
-## 2. Description
+## Description
 Migrate from MariaDB to MySQL starting from local instances. 
 Deploy both databases using Docker following the offical documentation.
 
-## 3. How to install and run the Project
+## How to install and run the Project
 1. Install Docker on your local machine
 https://docs.docker.com/desktop/install/mac-install/
 
@@ -63,9 +63,9 @@ Write a docker-compose.yaml to specify the steps
 Migrating from MariaDB to MySQL (Isn’t it downgrading?) 
 https://lefred.be/content/migrate-from-mariadb-to-the-mysql-on-centos/
 
-## 4. How to use the Project
+## How to use the Project
 
-## 5. Credits
+## Credits
 
-## 7. License
+## License
 
