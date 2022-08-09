@@ -44,9 +44,15 @@ Do I need 5.5.60-MariaDB version to import from MySQL? (How to change the versio
 Restoring data from dump files:
 $ docker exec -i some-mysql sh -c 'exec mysql -uroot -p"$MYSQL_ROOT_PASSWORD"' < /Users/so/Tasks/db-migration/my-dump/all-databases.sql
 
+$ docker exec -i some-mysql sh -c 'exec mysql -uroot -p"my-secret-pw"' < /Users/so/Tasks/db-migration/my-dump/all-databases.sql
+
+
 ERROR:
 mysql: [Warning] Using a password on the command line interface can be insecure.
 ERROR 1064 (42000) at line 72: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'PAGE_CHECKSUM=1 TRANSACTIONAL=0 COMMENT='Statistics on Columns'' at line 14
+
+Tried to fix it with the followong approach: https://stackoverflow.com/questions/30759313/mysql-database-import-error-1064
+Didn't help
 
 // Do I need a certain MariaDB version for the import? What else?
 
