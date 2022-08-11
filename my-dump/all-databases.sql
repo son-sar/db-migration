@@ -359,32 +359,6 @@ LOCK TABLES `host` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `index_stats`
---
-
-DROP TABLE IF EXISTS `index_stats`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `index_stats` (
-  `db_name` varchar(64) COLLATE utf8_bin NOT NULL,
-  `table_name` varchar(64) COLLATE utf8_bin NOT NULL,
-  `index_name` varchar(64) COLLATE utf8_bin NOT NULL,
-  `prefix_arity` int(11) unsigned NOT NULL,
-  `avg_frequency` decimal(12,4) DEFAULT NULL,
-  PRIMARY KEY (`db_name`,`table_name`,`index_name`,`prefix_arity`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Statistics on Indexes';
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `index_stats`
---
-
-LOCK TABLES `index_stats` WRITE;
-/*!40000 ALTER TABLE `index_stats` DISABLE KEYS */;
-/*!40000 ALTER TABLE `index_stats` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `plugin`
 --
 
@@ -563,30 +537,6 @@ CREATE TABLE `servers` (
 LOCK TABLES `servers` WRITE;
 /*!40000 ALTER TABLE `servers` DISABLE KEYS */;
 /*!40000 ALTER TABLE `servers` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `table_stats`
---
-
-DROP TABLE IF EXISTS `table_stats`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `table_stats` (
-  `db_name` varchar(64) COLLATE utf8_bin NOT NULL,
-  `table_name` varchar(64) COLLATE utf8_bin NOT NULL,
-  `cardinality` bigint(21) unsigned DEFAULT NULL,
-  PRIMARY KEY (`db_name`,`table_name`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Statistics on Tables';
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `table_stats`
---
-
-LOCK TABLES `table_stats` WRITE;
-/*!40000 ALTER TABLE `table_stats` DISABLE KEYS */;
-/*!40000 ALTER TABLE `table_stats` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -880,4 +830,4 @@ CREATE TABLE IF NOT EXISTS `transaction_registry` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-08-11 12:37:22
+-- Dump completed on 2022-08-11 13:02:52
